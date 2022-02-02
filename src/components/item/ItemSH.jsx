@@ -1,5 +1,7 @@
 import styled from "styled-components/macro";
-import { customCenter } from "../../globals/Variables";
+import { customCenter, yellow } from "../../globals/Variables";
+
+
 
 export const Container = styled.div`
   width: 100%;
@@ -18,7 +20,7 @@ export const Wrapper = styled.div`
 export const Header = styled.div`
     height: 4.5rem;
     width: 100%;
-    background: #fc0;
+    background: ${yellow};
     ${customCenter}
     justify-content: flex-start;
 

@@ -1,10 +1,11 @@
 
-
+// eslint-disable-next-line no-extend-native
 Date.prototype.addHours = function(h) {
     this.setTime(this.getTime() + (h*60*60*1000));
     return this;
 }
 
+// eslint-disable-next-line no-extend-native
 Date.prototype.setFormat = function(h) {
     var minutes = this.getMinutes().toString() 
                     === "0" ? "00" : "30"; 
@@ -20,4 +21,11 @@ export const getTimeTable = () => {
         sevenHalf.addHours(0.5)
     }
     return timesOfDay;
+}
+
+export const reformDate = (date) => {
+    const WEEK_DAYS = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAT", "THURSDAY", "FRIDAY", "SATURDAY"]
+    return WEEK_DAYS[date.getDay()] +","+
+    date.getDate()+"."+
+    date.getMonth()+"."+date.getYear();
 }

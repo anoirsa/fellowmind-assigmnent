@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
-import { reformDate } from "../globals/Variables";
+import { reformDate } from "../globals/Functions";
 import meetingsData from "./meetings.json";
 
 const Context = React.createContext();

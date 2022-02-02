@@ -1,10 +1,15 @@
 import styled from "styled-components/macro";
-import { customCenter } from "../../globals/Variables";
+import { customCenter, yellow } from "../../globals/Variables";
+
+
 
 export const Container = styled.div`
   width: 100%;
   height: 100%;
   ${customCenter}
+  @media screen and (max-width: 700px) {
+        margin-top: 20px;
+    }
 `;
 
 export const Wrapper = styled.div`
@@ -79,7 +84,7 @@ export const MeetingTimeBox = styled.div`
 
   & > .yellow--section {
     width: 8px;
-    background: #fc0;
+    background: ${yellow};
     height: 100%;
   }
   & > .information--section {
@@ -101,4 +106,10 @@ export const MeetingTimeBox = styled.div`
       color: #9e9e9e;
     }
   }
+  @media screen and (max-width: 1000px) {
+        width: 80%;
+    }
+    @media screen and (max-width: 700px) {
+        width: 90%;
+    }
 `;

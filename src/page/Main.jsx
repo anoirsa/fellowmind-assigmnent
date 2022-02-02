@@ -24,6 +24,7 @@ const Main = () => {
         <ImageBackground src={BackSource} />
         <CurrentMeeting>
           <WrapperMetting>
+            <h6 className="copy--rights">Made by software developer <span>Anouar Belila</span></h6>
             <h4 className="title">CURRENT MEETING</h4>
             <div className="white--line"></div>
             <h3 className="meeting--title">

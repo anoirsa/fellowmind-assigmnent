@@ -2,7 +2,7 @@ import styled, { createGlobalStyle } from "styled-components/macro";
 
 
 export const AppParentContainer = styled.div`
-  min-width: 600px;
+  min-width: 350px;
   width: 100%;
   overflow: hidden;
 `;

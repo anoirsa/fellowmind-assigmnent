@@ -1,10 +1,15 @@
 import styled from "styled-components/macro";
-import { customCenter } from "../globals/Variables";
+import { customCenter, yellow } from "../globals/Variables";
+
+
 
 export const MainPageContainer = styled.div`
     width: 100%;
     display: flex;
     min-height: 100vh;
+    @media screen and (max-width: 700px) {
+        flex-direction: column;
+    }
 `;
 
 export const MeetingCover = styled.div`
@@ -12,6 +17,12 @@ export const MeetingCover = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 700px) {
+        flex: none;
+        width: 100%;
+        min-height: 600px;
+
+    }
     
 `;
 
@@ -47,6 +58,14 @@ export const WrapperMetting = styled.div`
         font-weight: 300;
         margin-top: 20px;
     }
+    & > .copy--rights {
+        font-size: 10px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        & > span {
+            font-weight: 600;
+        }
+    }
 
 `;
 
@@ -70,7 +89,7 @@ export const MeetingPrgress = styled.div`
         & > .current--progress {
             width: 30%;
             height: 100%;
-            background: #fc0;
+            background: ${yellow};
             border-radius:50px;
         }
 
@@ -118,4 +137,9 @@ export const ImageBackground = styled.img`
 `;
 export const SubSection = styled.div`
     flex: 1.2;
+    @media screen and (max-width: 700px) {
+        flex: none;
+        width: 100%;
+        min-height: 500px;
+    }
 `;  

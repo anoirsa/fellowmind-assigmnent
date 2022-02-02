@@ -1,5 +1,5 @@
 # 1. Project's Title
-Introdcution assignment this [link](https://drive.google.com/file/d/1h1mhSJXz20XJQGNULhkttyPBltDl8IM-/view?usp=sharing) (10min)
+Introdcution assignment. You can watch video of demonstration this [link](https://drive.google.com/file/d/1h1mhSJXz20XJQGNULhkttyPBltDl8IM-/view?usp=sharing) (2min)
 
 ###### note (When watching the video on google drive, you need to manually set it to 720p instead of the default 360p)
 

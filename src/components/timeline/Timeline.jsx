@@ -8,7 +8,7 @@ import {
   MeetingTimeBox,
 } from "./TimelineSH";
 
-const Timeline = ({data, toTimeLine, meetingInto}) => {
+const Timeline = ({ data, toTimeLine, meetingInto }) => {
   return (
     <Container>
       <Wrapper>
@@ -18,18 +18,22 @@ const Timeline = ({data, toTimeLine, meetingInto}) => {
           {getTimeTable().map((value, index) => {
             let meetingOnTime = null;
             data.forEach((item) => {
-                if(item.StartTime === value) {
-                    meetingOnTime = item
-                }
-            })
+              if (item.StartTime === value) {
+                meetingOnTime = item;
+              }
+            });
             return (
               <HalfHourBox key={index}>
-                { meetingOnTime && (
-                  <MeetingTimeBox onClick={() => meetingInto({displayedMeeting : meetingOnTime})}>
+                {meetingOnTime && (
+                  <MeetingTimeBox
+                    onClick={() =>
+                      meetingInto({ displayedMeeting: meetingOnTime })
+                    }
+                  >
                     <div className="yellow--section" />
                     <div className="information--section">
-                        <h4>{meetingOnTime.Subject}</h4>
-                        <h6>{meetingOnTime.Organizer.toUpperCase()}</h6>
+                      <h4>{meetingOnTime.Subject}</h4>
+                      <h6>{meetingOnTime.Organizer.toUpperCase()}</h6>
                     </div>
                   </MeetingTimeBox>
                 )}

@@ -11,15 +11,15 @@ const Provider = ({ children }) => {
   const [meetings, setMeeting] = useState({
     currentMeeting: {},
     nextMeetings: [],
-    displayedMeeting: null
+    displayedMeeting: null,
   });
   const [loading, setLoading] = useState(true);
-  const meetingInto = ({displayedMeeting}) => {
-    setMeeting({...meetings, displayedMeeting})
-  }
+  const meetingInto = ({ displayedMeeting }) => {
+    setMeeting({ ...meetings, displayedMeeting });
+  };
   const toTimeLine = () => {
-    setMeeting({...meetings, displayedMeeting: null})
-  }
+    setMeeting({ ...meetings, displayedMeeting: null });
+  };
   useEffect(() => {
     let converted = meetingsData.map((value) => {
       const startConverted = new Date(value.StartTime);
@@ -29,7 +29,7 @@ const Provider = ({ children }) => {
         StartTime:
           startConverted.getHours() + ":" + startConverted.getMinutes(),
         EndTime: endConvereted.getHours() + ":" + endConvereted.getMinutes(),
-        MeetingDate: reformDate(startConverted)
+        MeetingDate: reformDate(startConverted),
       };
     });
     setData(converted);
@@ -39,10 +39,10 @@ const Provider = ({ children }) => {
       nextMeetings: [...converted].splice(1),
     });
     setLoading(false);
-   // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <Context.Provider value={{meetings, data, meetingInto, toTimeLine}}>
+    <Context.Provider value={{ meetings, data, meetingInto, toTimeLine }}>
       {!loading && children}
     </Context.Provider>
   );

@@ -10,7 +10,7 @@ import {
   Participants,
   Participant,
   DescriptionTextContainer,
-} from "./ItemSH";
+} from "./ItemSC";
 import ArrowLeft from "../../images/svgs/backarrow.svg";
 import Down from "../../images/svgs/down.svg";
 import Time from "../../images/icons/time.png";

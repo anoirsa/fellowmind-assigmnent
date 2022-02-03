@@ -6,7 +6,7 @@ import {
   TimelineBox,
   HalfHourBox,
   MeetingTimeBox,
-} from "./TimelineSH";
+} from "./TimelineSC";
 
 const Timeline = ({ data, toTimeLine, meetingInto }) => {
   return (

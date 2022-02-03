@@ -3,6 +3,8 @@ import { customCenter, yellow } from "../../globals/Variables";
 
 
 
+// Styled-components file
+
 export const Container = styled.div`
   width: 100%;
   height: 100%;
